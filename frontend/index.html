@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA AI</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="bg-orbs">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+    </div>
+
+    <div id="welcome">
+        <div class="w-logo">🤖</div>
+        <h1 class="w-title">Meet NOVA</h1>
+        <p class="w-sub">Your intelligent AI companion — always ready, always sharp, always yours.</p>
+        <div class="w-chips">
+            <div class="w-chip">✧ Chat Memory</div>
+            <div class="w-chip">⚡ Lightning Fast</div>
+            <div class="w-chip">📚 Chat History</div>
+            <div class="w-chip">🎨 Beautiful UI</div>
+        </div>
+        <button class="w-btn" id="start-btn">Start Chatting →</button>
+    </div>
+
+    <div id="sidebar">
+        <div class="sb-header">
+            <div class="sb-logo">🤖</div>
+            <span class="sb-brand">NOVA</span>
+        </div>
+        <button class="new-btn" id="new-chat-btn">✧ New Conversation</button>
+        <div class="sb-label">Recent Chats</div>
+        <div id="history-list"></div>
+        <div class="sb-footer">NOVA AI · Powered by Codeper-bit</div>
+    </div>
+
+    <div id="main">
+        <div id="header">
+            <div class="hdr-left">
+                <button class="menu-btn" id="menu-btn">☰</button>
+                <div class="dot"></div>
+                <div>
+                    <div class="hdr-name">NOVA</div>
+                    <div class="hdr-status">Online · Ready to help</div>
+                </div>
+            </div>
+            <button class="new-btn" id="new-chat-btn2" style="margin:0;padding:8px 14px;font-size:0.82rem;">✧ New
+                Chat</button>
+        </div>
+
+        <div id="chatbox">
+            <div class="empty" id="empty-state">
+                <div class="empty-icon">✧</div>
+                <div class="empty-title">What can I help you with?</div>
+                <p style="font-size:0.84rem;">Ask me anything. I remember our entire conversation.</p>
+                <div class="chips" id="suggestion-chips"></div>
+            </div>
+        </div>
+
+        <div id="input-area">
+            <div class="input-wrap">
+                <textarea id="askchat" placeholder="Message NOVA..." rows="1"></textarea>
+                <button id="send-btn" title="Send">
+                    <svg class="send-icon" viewBox="0 0 24 24">
+                        <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hint">Enter to send · Shift+Enter for new line</div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
