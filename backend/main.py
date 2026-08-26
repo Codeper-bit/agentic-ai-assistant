@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from groq import Groq
+from groq import AsyncGroq
 import os
 from dotenv import load_dotenv
 
@@ -17,7 +17,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+client = AsyncGroq(
+    api_key=os.getenv("GROQ_API_KEY")
+)
 
 conversation_history = {}
 
@@ -52,7 +54,7 @@ async def send_message(data: Message):
         })
 
         response = client.chat.completions.create(
-            model=os.getenv("MODEL_NAME", "llama-3.1-8b-instant"),
+            model="openai/gpt-oss-120b",
             messages=conversation_history[data.session_id]
         )
 
