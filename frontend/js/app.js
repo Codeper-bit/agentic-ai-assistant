@@ -143,7 +143,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         if (!animate)
             div.style.animation = 'none';
         div.innerHTML = `
-            <div class="avatar ${isUser ? 'user' : 'ai'}">${isUser ? '👤' : '🤖'}</div>
+            <div class="avatar ${isUser ? 'user' : 'ai'}">${isUser ? '' : ''}</div>
             <div>
                 <div class="bubble ${isUser ? 'user' : 'ai'}">${formatText(text)}</div>
                 <span class="msg-time">${time}</span>
@@ -157,7 +157,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         div.className = 'msg-row ai';
         div.id = 'loading-row';
         div.innerHTML = `
-            <div class="avatar ai">🤖</div>
             <div><div class="bubble ai"><div class="dots"><span></span><span></span><span></span></div></div></div>`;
         chatbox.appendChild(div);
         chatbox.scrollTop = chatbox.scrollHeight;
