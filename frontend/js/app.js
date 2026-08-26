@@ -256,7 +256,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             currentMessages.push({ role: 'user', text: text, time: time });
             showLoading();
             try {
-                const response = yield fetch('http://localhost:8000/send', {
+                const response = yield fetch('https://agentic-ai-assistant-bdwa.onrender.com/send', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ session_id: sessionId, message: text })
